@@ -33,14 +33,14 @@ for (int i = 0; i < size; i++)
 void strCopy(char *s1, const char *s2)
 {
 	int size = strLength(s2);
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size + 1; i++)
 		{
 			s1[i] = s2[i];
 		}
-	for (int i = size; i < (sizeof(s1)/sizeof(s1[i])); i++)
+	/*for (int i = size; i < (sizeof(s1)/sizeof(s1[i])); i++)
 		{
 			s1[i] = 0;
-		}
+		}*/
 }
 
 //If s1 does not have enough room buffer overflow.
