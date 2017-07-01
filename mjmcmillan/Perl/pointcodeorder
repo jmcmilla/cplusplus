@@ -1,0 +1,4 @@
+print "Please enter your list.\n";
+@list = <STDIN>;
+@list = sort(@list);
+print @list;

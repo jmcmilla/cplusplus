@@ -1,0 +1,15 @@
+sub total {
+		my $sum;
+		foreach (@_)
+			{
+			$sum = $sum + $_;
+			}
+		$sum;
+	}
+
+my @huge = (1..1000);
+my $huge_total = &total(@huge);
+print "The total of \@huge is $huge_total.\n";
+print "Enter some numbers on separate lines:\n";
+my $user_total = &total(<STDIN>);
+print "The total of theose numbers is $user_total.\n";
