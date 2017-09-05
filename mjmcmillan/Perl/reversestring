@@ -1,0 +1,3 @@
+print	"Please enter your list.\n";
+@list = <STDIN>;
+print (reverse @list);

@@ -1,0 +1,35 @@
+sub total {
+		my $sum;
+		foreach (@_)
+			{
+			$sum = $sum + $_;
+			}
+		$sum;
+	}
+
+sub average
+	{
+		my $total = &total(@_);
+		return $total / @_;
+	}
+
+sub above_average
+	{
+		@newarray;
+		$constaverage = &average(@_);
+		foreach (@_)
+			{
+				if($_ < $constaverage)
+					{
+						push @newarray, $_;
+					}
+			}
+		return @newarray;
+	}
+
+my @fred = above_average(1..10);
+print "\@fred is @fred\n";
+print "(Should be 6 7 8 9 10)\n";
+my @barney = above_average(100, 1..10);
+print "\@barney is @barney\n";
+print "(Should be just 100)\n";

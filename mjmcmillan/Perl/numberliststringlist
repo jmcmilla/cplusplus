@@ -1,0 +1,7 @@
+@stringlist = qw(fred betty barney dino wilma pebbles bam-bam);
+print "Enter your list of numbers.\n";
+chomp(@numberlist = <STDIN>);
+foreach $index (@numberlist)
+	{
+		print "@stringlist[$index - 1]\n";
+	}

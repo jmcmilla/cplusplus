@@ -1,0 +1,22 @@
+use v5.10;
+
+sub greet
+	{
+		my ($name) = @_;
+		state @previouspeople;
+		if (!@previouspeople)
+			{
+				print "$name\n";
+				print "Hello $name, you're the first one here.\n";
+			}
+		else
+			{
+				print "Hello $name, I've seen @previouspeople.\n";
+			}
+		push @previouspeople, $name;
+	}
+
+greet ("Fred");
+greet ("Barney");
+greet ("Wilma");
+greet ("Betty");

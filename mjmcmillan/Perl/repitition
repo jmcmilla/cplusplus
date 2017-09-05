@@ -1,0 +1,6 @@
+print "Please enter a word.\n";
+$string = <STDIN>;
+print "Please enter how many times you'd like that to be repeated.\n";
+chomp($number = <STDIN>);
+$newstring = $string x $number;
+print $newstring;

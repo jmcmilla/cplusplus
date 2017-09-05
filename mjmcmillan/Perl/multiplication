@@ -1,0 +1,6 @@
+print "Please enter a number.\n";
+chomp($first = <STDIN>);
+print "Please enter another number.\n";
+chomp($second = <STDIN>);
+$answer = $first * $second;
+print "Those two numbers mulitplied together equal $answer\n";
